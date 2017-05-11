@@ -11,7 +11,7 @@ public class SceneControllerScript : MonoBehaviour {
 	void Start () {
 		Vector3 startPos = farm_tile.transform.position;
 
-		for (int y=0; y < gridCols; y++) {
+		for (int y = 0; y < gridCols; y++) {
 			for (int x = 0; x < gridRows; x++) {
 				FarmTileBase tile;
 				if (x == 0 && y == 0) {
@@ -20,11 +20,10 @@ public class SceneControllerScript : MonoBehaviour {
 					tile = Instantiate (farm_tile) as FarmTileBase;
 				}
 			}
-		{
+		}
 	}
-	
-	// Update is called once per frame
+    // Update is called once per frame
 	void Update () {
-		
+
 	}
 }
