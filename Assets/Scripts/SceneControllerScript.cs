@@ -13,13 +13,13 @@ public class SceneControllerScript : MonoBehaviour {
 	// Set wonky positions for strangely-shaped tiles
 	void SetScene () {
 		gridPositions.Add(new Vector3 (0f, 0f, 0f));
-		gridPositions.Add(new Vector3 (0.887, 0.747, 0f));
-		gridPositions.Add(new Vector3 (1.78, 1.49, 0f));
-		gridPositions.Add(new Vector3 (0.89, -0.736, 0f));
-		gridPositions.Add(new Vector3 (2.66, 0.747, 0f));
-		gridPositions.Add(new Vector3 (1.79, -1.47, 0f));
-		gridPositions.Add(new Vector3 (2.68, -0.72, 0f));
-		gridPositions.Add(new Vector3 (3.56, 0.02, 0f));
+		gridPositions.Add(new Vector3 (0.887f, 0.747f, 0f));
+		gridPositions.Add(new Vector3 (1.78f, 1.49f, 0f));
+		gridPositions.Add(new Vector3 (0.89f, -0.736f, 0f));
+		gridPositions.Add(new Vector3 (2.66f, 0.747f, 0f));
+		gridPositions.Add(new Vector3 (1.79f, -1.47f, 0f));
+		gridPositions.Add(new Vector3 (2.68f, -0.72f, 0f));
+		gridPositions.Add(new Vector3 (3.56f, 0.02f, 0f));
 	}
 
 	// Use this for initialization
