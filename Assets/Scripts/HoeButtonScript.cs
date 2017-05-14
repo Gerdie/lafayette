@@ -4,30 +4,23 @@ using UnityEngine;
 
 public class HoeButtonScript : MonoBehaviour {
 
-	public GameObject Hand;
+	public GameObject Hand = GameObject.FindGameObjectWithTag("Player");
 
 	[SerializeField] private Sprite button_up;
 	[SerializeField] private Sprite button_down;
 
-	public HandScript handScript;
-
-
-
-
 	public void OnMouseDown(){
-		handScript = Hand.GetComponent<HandScript> ();
-		if (handScript.ToolInHand == 0) { // 0 means nothing
+		int inHand = Hand.GetComponent<HandScript> ().ToolInHand;
+		if (inHand == 0) { // 0 means nothing
 			GetComponent<SpriteRenderer>().sprite = button_down;
-			handScript.ToolInHand = 1; // 1 means hoe
-		} else if (handScript.ToolInHand == 1) {
+			inHand = 1; // 1 means hoe
+		} else if (inHand == 1) {
 			GetComponent<SpriteRenderer>().sprite = button_up;
-			handScript.ToolInHand = 0;
+			inHand = 0;
 		}
-		//handScript.ToolInHand = "hoe";
-		Debug.Log ("you are " + handScript.ToolInHand);
+//		handScript.ToolInHand = "hoe";
+//		Debug.Log ("you are " + handScript.ToolInHand);
 	}
-
-		
 
 	// Use this for initialization
 	void Start () {

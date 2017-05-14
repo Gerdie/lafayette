@@ -7,7 +7,7 @@ public class FarmTileBase : MonoBehaviour {
 	[SerializeField] private Sprite soil_tile;
 
 //	public GameObject Hand;
-	public GameObject Hand = GameObject.FindGameObjectWithTag("Hand");
+	public GameObject Hand = GameObject.FindGameObjectWithTag("Player");
 
 	public void OnMouseDown() {
 		int inHand = Hand.GetComponent<HandScript>().ToolInHand;
