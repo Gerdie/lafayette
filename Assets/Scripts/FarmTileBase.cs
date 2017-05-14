@@ -6,17 +6,16 @@ public class FarmTileBase : MonoBehaviour {
 	[SerializeField] private Sprite farm_tile;
 	[SerializeField] private Sprite soil_tile;
 
-	public GameObject Hand;
-	public HandScript handScript;
-
+//	public GameObject Hand;
+	public GameObject Hand = GameObject.FindGameObjectWithTag("Hand");
 
 	public void OnMouseDown() {
-		handScript = Hand.GetComponent<HandScript> ();
-		if (handScript.ToolInHand == 1) { // 0 means nothing
+		Int inHand = Hand.GetComponent<HandScript>().ToolInHand;
+		if (inHand == 1) { // 0 means nothing
 			GetComponent<SpriteRenderer> ().sprite = soil_tile;
-
 		} 
 	}
+
 	// Use this for initialization
 	void Start () {
 		GetComponent<SpriteRenderer> ().sprite = farm_tile;
