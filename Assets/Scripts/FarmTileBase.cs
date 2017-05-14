@@ -10,7 +10,7 @@ public class FarmTileBase : MonoBehaviour {
 	public GameObject Hand = GameObject.FindGameObjectWithTag("Hand");
 
 	public void OnMouseDown() {
-		Int inHand = Hand.GetComponent<HandScript>().ToolInHand;
+		int inHand = Hand.GetComponent<HandScript>().ToolInHand;
 		if (inHand == 1) { // 0 means nothing
 			GetComponent<SpriteRenderer> ().sprite = soil_tile;
 		} 
